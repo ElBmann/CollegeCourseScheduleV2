@@ -1,0 +1,56 @@
+﻿<Window x:Class="CourseSchedule.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CourseSchedule"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="590" Width="725">
+    <Grid>
+        <TextBox x:Name="_CourseFileNameTextBox" Height="23" Margin="111,5,10,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <Button x:Name="_OpenCrsCollectionbutton" Content="Open Course Collection" HorizontalAlignment="Left" Margin="10,33,0,0" VerticalAlignment="Top" Width="221" Height="28"/>
+        <GroupBox x:Name="groupBox" Header="Find Course" HorizontalAlignment="Left" Margin="10,61,0,0" VerticalAlignment="Top" Height="232" Width="221">
+            <Grid HorizontalAlignment="Left" Height="189" Margin="0,10,-2,0" VerticalAlignment="Top" Width="211">
+                <Label x:Name="label" Content="Course Id" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.141,0.227" Width="66"/>
+                <TextBox x:Name="_FindCourseIDTextBox" HorizontalAlignment="Left" Height="23" Margin="81,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                <Button x:Name="_FindCourseIDButton" Content="Find by Course Id" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" Width="191" Height="32" Click="_FindCourseIDButton_Click"/>
+                <Label x:Name="label2" Content="Designator" HorizontalAlignment="Left" Margin="10,78,0,0" VerticalAlignment="Top"/>
+                <Label x:Name="label2_Copy" Content="Number" HorizontalAlignment="Left" Margin="10,109,0,0" VerticalAlignment="Top"/>
+                <TextBox x:Name="_FindDesignatorTextBox" HorizontalAlignment="Left" Height="23" Margin="81,78,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                <TextBox x:Name="_FindNumberTextBox" HorizontalAlignment="Left" Height="23" Margin="81,109,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                <Button x:Name="_FindDesignatorAndNumberButton" Content="Find by Designator and Number" HorizontalAlignment="Left" Margin="10,139,0,0" VerticalAlignment="Top" Width="191" Height="40"/>
+            </Grid>
+        </GroupBox>
+        <Label x:Name="label1" Content="Course Filename" HorizontalAlignment="Left" Margin="0,2,0,0" VerticalAlignment="Top" Width="106"/>
+        <GroupBox x:Name="groupBox1" Header="Course Data" Margin="263,61,10,0" Height="232" VerticalAlignment="Top">
+            <Grid HorizontalAlignment="Left" Height="189" Margin="0,0,-2,0" VerticalAlignment="Top" Width="434"/>
+        </GroupBox>
+        <Label x:Name="label3" Content="Course Id" HorizontalAlignment="Left" Margin="283,85,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label3_Copy" Content="Designator" HorizontalAlignment="Left" Margin="283,116,0,0" VerticalAlignment="Top" Height="25"/>
+        <Label x:Name="label3_Copy1" Content="Number" HorizontalAlignment="Left" Margin="283,146,0,0" VerticalAlignment="Top" Height="25" RenderTransformOrigin="0.55,-0.192"/>
+        <Label x:Name="label3_Copy2" Content="Title" HorizontalAlignment="Left" Margin="283,176,0,0" VerticalAlignment="Top" Height="25"/>
+        <Label x:Name="label3_Copy3" Content="Credits" HorizontalAlignment="Left" Margin="283,206,0,0" VerticalAlignment="Top" Height="25"/>
+        <Label x:Name="label3_Copy4" Content="Description" HorizontalAlignment="Left" Margin="283,231,0,0" VerticalAlignment="Top" Height="25"/>
+        <TextBox x:Name="_DesignatorDataTextBox" Height="23" Margin="406,120,31,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBox x:Name="_TitleDataTextBox" Height="23" Margin="406,180,31,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBox x:Name="_CreditsDataTextBox" Height="23" Margin="406,206,31,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBox x:Name="_DescriptionDataTextBox" Height="23" Margin="406,234,31,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBox x:Name="_NumberDataTextBox" Height="23" Margin="406,148,31,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBox x:Name="_CourseIDDataTextBox" Height="23" Margin="406,88,31,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <GroupBox x:Name="groupBox2" Header="GroupBox" Margin="10,320,10,0" VerticalAlignment="Top" Height="229">
+            <Grid Height="209" Margin="10,10,-2,-12" VerticalAlignment="Top">
+                <TextBox x:Name="_ProfessorsFileNameTextBox" Height="23" Margin="128,10,15,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+                <Label x:Name="label4" Content="Professors Filename" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top" Width="128"/>
+                <Button x:Name="_ProfessorCollectionButton" Content="Open Professor Collection" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" Width="153" Height="30"/>
+                <ListView x:Name="listView" Height="120" Margin="10,76,10,0" VerticalAlignment="Top">
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn/>
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+            </Grid>
+        </GroupBox>
+
+    </Grid>
+</Window>
