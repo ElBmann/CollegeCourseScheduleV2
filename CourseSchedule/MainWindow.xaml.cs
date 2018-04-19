@@ -53,7 +53,7 @@ namespace CourseSchedule
 
             if (CC.Find(CourseID) !=null)
             {
-                // Grabing data from Course Collection List. And populating the TextBox in Course Data. 
+                // Grabing data from Course Collection List. And populating the TextBox in Course Data
                _CourseIDDataTextBox.Text = c.Id.ToString();
                _DesignatorDataTextBox.Text = c.Designator.ToString();
                _NumberDataTextBox.Text = c.Number.ToString();
