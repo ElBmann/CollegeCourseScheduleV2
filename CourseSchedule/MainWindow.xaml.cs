@@ -37,6 +37,7 @@ namespace CourseSchedule
             string C_ID = "";
             C_ID = _FindCourseIDTextBox.Text;
             int CourseID = Int32.Parse(C_ID);
+            
 
             c.Id = CourseID;
             c.Number = "23";
@@ -52,7 +53,18 @@ namespace CourseSchedule
 
             if (CC.Find(CourseID) !=null)
             {
-               // MessageBox.Show();
+                // Grabing data from Course Collection List. And populating the TextBox in Course Data 
+               _CourseIDDataTextBox.Text = c.Id.ToString();
+               _DesignatorDataTextBox.Text = c.Designator.ToString();
+               _NumberDataTextBox.Text = c.Number.ToString();
+               _TitleDataTextBox.Text = c.Title.ToString();
+               _CreditsDataTextBox.Text = c.Credits.ToString();
+               _DescriptionDataTextBox.Text = c.Description.ToString();
+
+
+
+
+
                 MessageBox.Show(c.ToString());
             }
             else
