@@ -25,10 +25,14 @@ namespace CourseSchedule
         DataLayer DL = new DataLayer();
         CourseCollection CC = new CourseCollection();
         Course c = new Course();
+        OpenFileDialog OFD = new OpenFileDialog();
+
+        
         public MainWindow()
         {
             InitializeComponent();
             _CourseFileNameTextBox.IsReadOnly = true;
+            OFD.InitialDirectory = @"C:\Users\Brian Recuero\Source\Repos\CollegeCourseScheduleV2\CourseSchedule\bin";
             //DataLayer DL;
         }
 
@@ -78,9 +82,9 @@ namespace CourseSchedule
 
         private void _OpenCrsCollectionbutton_Click(object sender, RoutedEventArgs e)
         {
-            OpenFileDialog OFD = new OpenFileDialog();
-            OFD.DefaultExt = ".txt";
-            OFD.Filter = "Text Document (.txt)|*.txt";
+          
+            OFD.DefaultExt = ".json";
+            OFD.Filter = "Json Document (.json)|*.json";
             if (OFD.ShowDialog() == true)
             {
                 string filename = OFD.FileName;
