@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using CollegeCourseLibrary1;
+using Microsoft.Win32;
 
 namespace CourseSchedule
 {
@@ -61,9 +62,22 @@ namespace CourseSchedule
             }
                  
             
-            }  
-             
+            }
+
+        private void _OpenCrsCollectionbutton_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog OFD = new OpenFileDialog();
+            OFD.DefaultExt = ".txt";
+            OFD.Filter = "Text Document (.txt)|*.txt";
+            if (OFD.ShowDialog() == true)
+            {
+                string filename = OFD.FileName;
+                _CourseFileNameTextBox.Text = filename;
+            }
                
-            
+            {
+
+            }
         }
+    }
     }
