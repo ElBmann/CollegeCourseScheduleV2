@@ -31,8 +31,10 @@ namespace CourseSchedule
         public MainWindow()
         {
             InitializeComponent();
-            _CourseFileNameTextBox.IsReadOnly = true;
             OFD.InitialDirectory = @"C:\Users\Brian Recuero\Source\Repos\CollegeCourseScheduleV2\CourseSchedule\bin";
+            _CourseFileNameTextBox.IsReadOnly = true;
+           
+
             //DataLayer DL;
         }
 
@@ -82,9 +84,11 @@ namespace CourseSchedule
 
         private void _OpenCrsCollectionbutton_Click(object sender, RoutedEventArgs e)
         {
-          
+
+           
             OFD.DefaultExt = ".json";
             OFD.Filter = "Json Document (.json)|*.json";
+            
             if (OFD.ShowDialog() == true)
             {
                 string filename = OFD.FileName;
