@@ -17,9 +17,7 @@ using Microsoft.Win32;
 
 namespace CourseSchedule
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
+   
     public partial class MainWindow : Window
     {
         DataLayer DL = new DataLayer();
@@ -65,7 +63,27 @@ namespace CourseSchedule
                _CreditsDataTextBox.Text = c.Credits.ToString();
                _DescriptionDataTextBox.Text = c.Description.ToString();
 
+              /*  Console.WriteLine("*********************");
+                Console.WriteLine("Read CourseCollection from XML file");
+                Console.WriteLine("*********************");
 
+
+                Console.Write("Enter a File Name: ");
+                string x_courseReadFile = Console.ReadLine() + ".json";
+
+                FileStream x_courseReader = new FileStream(x_courseReadFile, FileMode.Open, FileAccess.Read);
+
+                DataContractSerializer x_inputCourseSerializer;
+                x_inputCourseSerializer = new DataContractSerializer(typeof(CourseCollection));
+
+                cCollection = (CourseCollection)x_inputCourseSerializer.ReadObject(x_courseReader);
+
+                x_courseReader.Close();
+
+                Console.WriteLine("CourseCollection XML Read \n");
+
+                returnToMenu = true;
+                break;*/
 
 
 
