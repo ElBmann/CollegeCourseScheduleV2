@@ -26,12 +26,15 @@ namespace CourseSchedule
         CourseCollection CC = new CourseCollection();
         Course c = new Course();
         OpenFileDialog OFD = new OpenFileDialog();
+        //This dosent work here becuese its not the same address path
+        string path = @"C:\Users\Brecuero\Documents\Visual Studio 2015\Projects\CourseSchedule\CourseSchedule\bin";
 
-        
+
         public MainWindow()
         {
             InitializeComponent();
-            OFD.InitialDirectory = @"C:\Users\Brian Recuero\Source\Repos\CollegeCourseScheduleV2\CourseSchedule\bin";
+            
+            OFD.InitialDirectory = path;
             _CourseFileNameTextBox.IsReadOnly = true;
            
 
