@@ -63,27 +63,29 @@ namespace CourseSchedule
                _CreditsDataTextBox.Text = c.Credits.ToString();
                _DescriptionDataTextBox.Text = c.Description.ToString();
 
-              /*  Console.WriteLine("*********************");
-                Console.WriteLine("Read CourseCollection from XML file");
-                Console.WriteLine("*********************");
+                /*  //Reads Course Collection from a JSON file
+                            CourseCollection cmc = new CourseCollection();
+
+                            Console.WriteLine("*********************");
+                            Console.WriteLine("Read CourseCollection from JSON file");
+                            Console.WriteLine("*********************");
+
+                            Console.Write("Enter a File Name: ");
+                            string courseReadFile = Console.ReadLine() + ".json";
+                            //Opens the file stream to read the JSON
+                            FileStream courseReader = new FileStream(courseReadFile, FileMode.Open, FileAccess.Read);
+                            //DataContractJsonSerializer Instance
+                            DataContractJsonSerializer inputCourseSerializer;
+                            inputCourseSerializer = new DataContractJsonSerializer(typeof(CourseCollection));
+
+                            cCollection = (CourseCollection)inputCourseSerializer.ReadObject(courseReader);
+                            courseReader.Close();
+
+                            Console.WriteLine("CourseCollection JSON Read \n");
 
 
-                Console.Write("Enter a File Name: ");
-                string x_courseReadFile = Console.ReadLine() + ".json";
-
-                FileStream x_courseReader = new FileStream(x_courseReadFile, FileMode.Open, FileAccess.Read);
-
-                DataContractSerializer x_inputCourseSerializer;
-                x_inputCourseSerializer = new DataContractSerializer(typeof(CourseCollection));
-
-                cCollection = (CourseCollection)x_inputCourseSerializer.ReadObject(x_courseReader);
-
-                x_courseReader.Close();
-
-                Console.WriteLine("CourseCollection XML Read \n");
-
-                returnToMenu = true;
-                break;*/
+                            returnToMenu = true;
+                            break;*/
 
 
 
