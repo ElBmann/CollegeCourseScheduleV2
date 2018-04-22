@@ -12,7 +12,7 @@
         <GroupBox x:Name="groupBox" Header="Find Course" HorizontalAlignment="Left" Margin="10,61,0,0" VerticalAlignment="Top" Height="232" Width="221">
             <Grid HorizontalAlignment="Left" Height="189" Margin="0,10,-2,0" VerticalAlignment="Top" Width="211">
                 <Label x:Name="label" Content="Course Id" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.141,0.227" Width="66"/>
-                <TextBox x:Name="_FindCourseIDTextBox" HorizontalAlignment="Left" Height="23" Margin="81,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                <TextBox x:Name="_FindCourseIDTextBox" PreviewTextInput="NumberValidationTextBox" HorizontalAlignment="Left" Height="23" Margin="81,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
                 <Button x:Name="_FindCourseIDButton" Content="Find by Course Id" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" Width="191" Height="32" Click="_FindCourseIDButton_Click"/>
                 <Label x:Name="label2" Content="Designator" HorizontalAlignment="Left" Margin="10,78,0,0" VerticalAlignment="Top"/>
                 <Label x:Name="label2_Copy" Content="Number" HorizontalAlignment="Left" Margin="10,109,0,0" VerticalAlignment="Top"/>
