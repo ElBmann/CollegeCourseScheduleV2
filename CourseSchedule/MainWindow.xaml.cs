@@ -110,6 +110,7 @@ namespace CourseSchedule
 
             OFD.DefaultExt = ".json";
             OFD.Filter = "Json Document (.json)|*.json";
+            OFD.Title = "Open Course Collection From JSON";
             if (OFD.ShowDialog() == true)
             {
                 string filename = OFD.FileName;
