@@ -18,7 +18,7 @@
                 <Label x:Name="label2_Copy" Content="Number" HorizontalAlignment="Left" Margin="10,109,0,0" VerticalAlignment="Top"/>
                 <TextBox x:Name="_FindDesignatorTextBox" HorizontalAlignment="Left" Height="23" Margin="81,78,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
                 <TextBox x:Name="_FindNumberTextBox" HorizontalAlignment="Left" Height="23" Margin="81,109,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-                <Button x:Name="_FindDesignatorAndNumberButton" Content="Find by Designator and Number" HorizontalAlignment="Left" Margin="10,139,0,0" VerticalAlignment="Top" Width="191" Height="40"/>
+                <Button x:Name="_FindDesignatorAndNumberButton" Content="Find by Designator and Number" HorizontalAlignment="Left" Margin="10,139,0,0" VerticalAlignment="Top" Width="191" Height="40" Click="_FindDesignatorAndNumberButton_Click"/>
             </Grid>
         </GroupBox>
         <Label x:Name="label1" Content="Course Filename" HorizontalAlignment="Left" Margin="0,2,0,0" VerticalAlignment="Top" Width="106"/>
