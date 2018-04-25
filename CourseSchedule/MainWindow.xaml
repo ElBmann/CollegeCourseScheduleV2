@@ -45,7 +45,9 @@
                 <ListView x:Name="listView" Margin="10,76,10,10" VerticalContentAlignment="Bottom">
                     <ListView.View>
                         <GridView>
-                            <GridViewColumn/>
+                            <GridViewColumn Header="ID" DisplayMemberBinding="{Binding Id}"/>
+                            <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Name}"/>
+                            <GridViewColumn Header="Phone" DisplayMemberBinding="{Binding Phone}"/>
                         </GridView>
                     </ListView.View>
                 </ListView>
