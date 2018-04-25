@@ -44,7 +44,9 @@
                 <Button x:Name="_ProfessorCollectionButton" Content="Open Professor Collection" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" Width="153" Height="30" Click="_ProfessorCollectionButton_Click"/>
                 <ListView x:Name="listView" Margin="10,76,10,10" VerticalContentAlignment="Bottom">
                     <ListView.View>
-                        <GridView/>
+                        <GridView>
+                            <GridViewColumn/>
+                        </GridView>
                     </ListView.View>
                 </ListView>
             </Grid>
