@@ -34,6 +34,7 @@ namespace CourseSchedule
         {
             InitializeComponent();
             _CourseFileNameTextBox.IsReadOnly = true;
+            _ProfessorsFileNameTextBox.IsReadOnly = true;
             OFD.InitialDirectory = path;
             
         }//End Main Window
@@ -83,7 +84,7 @@ namespace CourseSchedule
                     C_Credits = listCourses.Credits.ToString();
                     C_Desc = listCourses.Description.ToString();
                     C_Desi = listCourses.Designator.ToString();
-                    //  _CourseIDDataTextBox.Text = listCourses.Id.ToString();
+                  
 
                   
                    
@@ -119,7 +120,7 @@ namespace CourseSchedule
                     _DescriptionDataTextBox.Text = CC.Find(searchCourseID).Description.ToString();
 
 
-                   // MessageBox.Show(c.ToString());
+                   
                 }
                 else
                 {
@@ -190,7 +191,7 @@ namespace CourseSchedule
             string C_Credits = "";
             string C_Desc = "";
             string C_Desi = "";
-            string searchID = "";
+          
 
             _CourseIDDataTextBox.Clear();
             _NumberDataTextBox.Clear();
@@ -201,7 +202,7 @@ namespace CourseSchedule
 
             if (isEmptyFindDesAndNumber())
             {
-                MessageBox.Show("Please enter courseID");
+                MessageBox.Show("Please enter Designator or Number");
             }
             else
             {
@@ -227,8 +228,7 @@ namespace CourseSchedule
                     C_Credits = listCourses.Credits.ToString();
                     C_Desc = listCourses.Description.ToString();
                     C_Desi = listCourses.Designator.ToString();
-                    //  _CourseIDDataTextBox.Text = listCourses.Id.ToString();
-
+                  
 
 
                     int credits = Int32.Parse(C_Credits);
@@ -246,9 +246,6 @@ namespace CourseSchedule
 
                 CC.CList.Add(c);
 
-                //Converts the sting into an int
-            //    searchID = _FindCourseIDTextBox.Text;
-            //    int searchCourseID = Int32.Parse(searchID);
 
 
                 //If Id is null the course does not exsis
@@ -263,7 +260,7 @@ namespace CourseSchedule
                     _DescriptionDataTextBox.Text = CC.Find(_FindDesignatorTextBox.Text, _FindNumberTextBox.Text).Description.ToString();
 
 
-                    // MessageBox.Show(c.ToString());
+                   
                 }
                 else
                 {
@@ -330,14 +327,14 @@ namespace CourseSchedule
                 _ProfessorsFileNameTextBox.Text = filename;
 
                 //Opens the file stream to read the JSON
-                FileStream courseReader = new FileStream(filename, FileMode.Open, FileAccess.Read);
+                FileStream professorReader = new FileStream(filename, FileMode.Open, FileAccess.Read);
 
                 //DataContractJsonSerializer Instance
-                DataContractJsonSerializer inputCourseSerializer;
-                inputCourseSerializer = new DataContractJsonSerializer(typeof(ProfessorCollection));
+                DataContractJsonSerializer inputProfessorSerializer;
+                inputProfessorSerializer = new DataContractJsonSerializer(typeof(ProfessorCollection));
 
-                //Populate the CourseCollection window member variable with data from the selected file (deserialize into that member variable). 
-                PC = (ProfessorCollection)inputCourseSerializer.ReadObject(courseReader);
+                //Populate the ProfessorCollection window member variable with data from the selected file (deserialize into that member variable). 
+                PC = (ProfessorCollection)inputProfessorSerializer.ReadObject(professorReader);
 
                 //This can be used to populate fields or list views
                  foreach (var PList in PC.PList)
@@ -345,7 +342,7 @@ namespace CourseSchedule
                     listView.Items.Add(PList);
                     
                  }
-                courseReader.Close();
+                professorReader.Close();
 
             }
 
