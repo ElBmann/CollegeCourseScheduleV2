@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CourseSchedule"
         mc:Ignorable="d"
-        Title="MainWindow" Height="590" Width="725">
+        Title="Course Schedule v2 - Brian J. Recuero" Height="595" Width="725">
     <Grid>
         <TextBox x:Name="_CourseFileNameTextBox" Height="23" Margin="111,5,10,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
         <Button x:Name="_OpenCrsCollectionbutton" Content="Open Course Collection" HorizontalAlignment="Left" Margin="10,33,0,0" VerticalAlignment="Top" Width="221" Height="28" Click="_OpenCrsCollectionbutton_Click"/>
@@ -37,8 +37,8 @@
         <TextBox x:Name="_DescriptionDataTextBox" Height="23" Margin="406,234,31,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
         <TextBox x:Name="_NumberDataTextBox" Height="23" Margin="406,148,31,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
         <TextBox x:Name="_CourseIDDataTextBox" Height="23" Margin="406,88,31,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <GroupBox x:Name="groupBox2" Header="GroupBox" Margin="10,320,10,0" VerticalAlignment="Top" Height="229">
-            <Grid Height="209" Margin="10,10,-2,-12" VerticalAlignment="Top">
+        <GroupBox x:Name="groupBox2" Header="GroupBox" Margin="10,324,10,10">
+            <Grid Height="209" Margin="10,15,-2,-17">
                 <TextBox x:Name="_ProfessorsFileNameTextBox" Height="23" Margin="128,10,15,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
                 <Label x:Name="label4" Content="Professors Filename" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top" Width="128"/>
                 <Button x:Name="_ProfessorCollectionButton" Content="Open Professor Collection" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" Width="153" Height="30" Click="_ProfessorCollectionButton_Click"/>
