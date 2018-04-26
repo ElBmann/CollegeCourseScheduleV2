@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CourseSchedule"
         mc:Ignorable="d"
-        Title="Course Schedule v2 - Brian J. Recuero" Height="595" Width="725">
+        Title="Course Schedule v2 - Brian J. Recuero" Height="600" Width="725">
     <Grid>
         <TextBox x:Name="_CourseFileNameTextBox" Height="23" Margin="111,5,10,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
         <Button x:Name="_OpenCrsCollectionbutton" Content="Open Course Collection" HorizontalAlignment="Left" Margin="10,33,0,0" VerticalAlignment="Top" Width="221" Height="28" Click="_OpenCrsCollectionbutton_Click"/>
@@ -42,7 +42,7 @@
                 <TextBox x:Name="_ProfessorsFileNameTextBox" Height="23" Margin="128,10,15,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
                 <Label x:Name="label4" Content="Professors Filename" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top" Width="128"/>
                 <Button x:Name="_ProfessorCollectionButton" Content="Open Professor Collection" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" Width="153" Height="30" Click="_ProfessorCollectionButton_Click"/>
-                <ListView x:Name="listView" Margin="10,76,10,10" VerticalContentAlignment="Bottom">
+                <ListView x:Name="listView" Margin="10,76,10,27" VerticalContentAlignment="Bottom">
                     <ListView.View>
                         <GridView>
                             <GridViewColumn Header="ID" DisplayMemberBinding="{Binding Id}"/>

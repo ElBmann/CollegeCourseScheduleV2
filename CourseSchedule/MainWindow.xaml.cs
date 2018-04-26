@@ -30,11 +30,18 @@ namespace CourseSchedule
         OpenFileDialog OFD = new OpenFileDialog();
         string path = @"C:\Users\Brian Recuero\Source\Repos\CollegeCourseScheduleV2\CourseSchedule\bin";
 
+
         public MainWindow()
         {
             InitializeComponent();
             _CourseFileNameTextBox.IsReadOnly = true;
             _ProfessorsFileNameTextBox.IsReadOnly = true;
+            _CourseIDDataTextBox.IsReadOnly = true;
+            _CreditsDataTextBox.IsReadOnly = true;
+            _DescriptionDataTextBox.IsReadOnly = true;
+            _DesignatorDataTextBox.IsReadOnly = true;
+            _NumberDataTextBox.IsReadOnly = true;
+            _TitleDataTextBox.IsReadOnly = true;
             OFD.InitialDirectory = path;
             
         }//End Main Window
