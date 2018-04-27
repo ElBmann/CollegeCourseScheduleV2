@@ -1,4 +1,19 @@
-﻿using System;
+﻿//******************************************************
+// File: MainWindow.cs
+//
+// Purpose: Using College Course Libarary1 DLL to
+// Read Json files and displaying them in List views
+// and texts views
+//  
+//
+// Written By: Brian J. Recuero 
+//
+// Compiler: Visual Studio 2015
+//
+//******************************************************
+
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,14 +38,22 @@ namespace CourseSchedule
 
     public partial class MainWindow : Window
     {
+        #region creating Instance variables
         DataLayer DL = new DataLayer();
         CourseCollection CC = new CourseCollection();
         ProfessorCollection PC = new ProfessorCollection();
         Course c = new Course();
         OpenFileDialog OFD = new OpenFileDialog();
         string path = @"C:\Users\Brian Recuero\Source\Repos\CollegeCourseScheduleV2\CourseSchedule\bin";
-
-
+        #endregion
+        //****************************************************
+        // Method: MainWindow()
+        // Sets all TextBoxes to read only at run time. And
+        // Sets the initialDirectory Path for open file dialog 
+        //
+        // Purpose: To show the heading for screen output.
+        //****************************************************
+        #region Methods
         public MainWindow()
         {
             InitializeComponent();
@@ -46,6 +69,12 @@ namespace CourseSchedule
             
         }//End Main Window
 
+
+        //****************************************************
+        // Method: FindCourseIDButton_Click()
+        //
+        // Purpose: To show the heading for screen output.
+        //****************************************************
         private void _FindCourseIDButton_Click(object sender, RoutedEventArgs e)
         {
             string C_ID = "";
@@ -356,4 +385,5 @@ namespace CourseSchedule
 
         }
     }//End Main Window Class 
+    #endregion
 }
