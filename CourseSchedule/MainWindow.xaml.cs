@@ -46,6 +46,8 @@ namespace CourseSchedule
         OpenFileDialog OFD = new OpenFileDialog();
         string path = @"C:\Users\Brian Recuero\Source\Repos\CollegeCourseScheduleV2\CourseSchedule\bin";
         #endregion
+
+        #region Methods
         //****************************************************
         // Method: MainWindow()
         // Sets all TextBoxes to read only at run time. And
@@ -53,7 +55,6 @@ namespace CourseSchedule
         //
         // Purpose: To show the heading for screen output.
         //****************************************************
-        #region Methods
         public MainWindow()
         {
             InitializeComponent();
@@ -73,10 +74,14 @@ namespace CourseSchedule
         //****************************************************
         // Method: FindCourseIDButton_Click()
         //
-        // Purpose: To show the heading for screen output.
+        // Purpose: When the button is pressed. Course collection file is desirialized(Read).
+        // The user can choose to search by Id from the read file.
+        // If the id is found then its displayed to the Textbox(ReadOnly)
+        // else a pop message is displayed telling the usr that the ID was not found.
         //****************************************************
         private void _FindCourseIDButton_Click(object sender, RoutedEventArgs e)
         {
+            //Initializing Variables
             string C_ID = "";
             string C_Num = "";
             string C_Title = "";
@@ -101,7 +106,7 @@ namespace CourseSchedule
                 
                 string filename = "courses.json";
 
-                      //Opens the file stream to read the JSON
+                 //Opens the file stream to read the JSON
                 FileStream courseReader = new FileStream(filename, FileMode.Open, FileAccess.Read);
 
                 //DataContractJsonSerializer Instance
@@ -169,6 +174,13 @@ namespace CourseSchedule
 
         }//End _FindCourseIDButton_Click
 
+        //****************************************************
+        // Method: _OpenCrsCollectionbutton_Click()
+        //
+        // Purpose: When the button is pressed. Course collection file is desirialized(Read)
+        // The file name is then displayed in the Text Box
+        //****************************************************
+
         private void _OpenCrsCollectionbutton_Click(object sender, RoutedEventArgs e)
         {
             //Clear the text boxs Once Searching for the JSON file
@@ -214,11 +226,18 @@ namespace CourseSchedule
 
             }
 
-               Console.WriteLine("CourseCollection JSON Read \n");
+               
 
 
         }//End _OpenCrsCollectionbutton_Click
 
+        //****************************************************
+        // Method: _FindDesignatorAndNumberButton_Click()
+        // Purpose: When the button is pressed. Course collection file is desirialized(Read).
+        // The user can search by Designator and Number from the read file.
+        // If both Disignator and Number are found then its displayed to the Textbox(ReadOnly)
+        // else a pop message is displayed telling the usr that the ID was not found.
+        //****************************************************
         private void _FindDesignatorAndNumberButton_Click(object sender, RoutedEventArgs e)
         {
             string C_ID = "";
@@ -307,33 +326,13 @@ namespace CourseSchedule
             }
         }// End _FindDesignatorAndNumberButton_Click
 
-        public bool isEmptyFindCourseID()
-        {
-            if (_FindCourseIDTextBox.Text == "")
-            {
-                return true;
-            }
-            return false;
-        }//End isEmptyFindCourseID 
-
-        public bool isEmptyFindDesAndNumber()
-        {
-            if (_FindDesignatorTextBox.Text == "" || _FindNumberTextBox.Text == "")
-            {
-                return true;
-            }
-            return false;
-        }//End isEmptyFindDesAndNumber
-
-        private void NumberValidationTextBox(object sender, TextCompositionEventArgs e)
-        {
-            Regex regex = new Regex("[^0-9]+");
-            e.Handled = regex.IsMatch(e.Text);
-            if (e.Handled == true)
-            {
-                MessageBox.Show("Please enter numbers Only");
-            }
-        }//End NumberValidationTextBox
+        //****************************************************
+        // Method: _ProfessorCollectionButton_Click()
+        //
+        // Purpose: When the button is pressed. Course collection file is desirialized(Read)
+        // The file name is then displayed in the Text Box and all the data is then 
+        // Displayed in the list view.
+        //****************************************************
 
         private void _ProfessorCollectionButton_Click(object sender, RoutedEventArgs e)
         {
@@ -373,17 +372,63 @@ namespace CourseSchedule
                 PC = (ProfessorCollection)inputProfessorSerializer.ReadObject(professorReader);
 
                 //This can be used to populate fields or list views
-                 foreach (var PList in PC.PList)
-                 {
+                foreach (var PList in PC.PList)
+                {
                     listView.Items.Add(PList);
-                    
-                 }
+
+                }
                 professorReader.Close();
 
             }
 
 
         }
+
+        //****************************************************
+        // Method: isEmptyFindCourseID()
+        // Purpose: If the Find Course ID textBox is empty 
+        // return true. 
+        //****************************************************
+        public bool isEmptyFindCourseID()
+        {
+            if (_FindCourseIDTextBox.Text == "")
+            {
+                return true;
+            }
+            return false;
+        }//End isEmptyFindCourseID 
+
+        //****************************************************
+        // Method: isEmptyFindDesAndNumber()
+        // Purpose: If the Find Course Des and Num textBox is empty 
+        // return true. 
+        //****************************************************
+        public bool isEmptyFindDesAndNumber()
+        {
+            if (_FindDesignatorTextBox.Text == "" || _FindNumberTextBox.Text == "")
+            {
+                return true;
+            }
+            return false;
+        }//End isEmptyFindDesAndNumber
+
+        //****************************************************
+        // Method: NumberValidationTextBox()
+        // Purpose: Using Regexs checks if the data being inputted
+        // is a number. Else a message is displayed telling user
+        // that to only input numbers.
+        // 
+        //****************************************************
+        private void NumberValidationTextBox(object sender, TextCompositionEventArgs e)
+        {
+            Regex regex = new Regex("[^0-9]+");
+            e.Handled = regex.IsMatch(e.Text);
+            if (e.Handled == true)
+            {
+                MessageBox.Show("Please enter numbers Only");
+            }
+        }//End NumberValidationTextBox
+
     }//End Main Window Class 
     #endregion
 }
