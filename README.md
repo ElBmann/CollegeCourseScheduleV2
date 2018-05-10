@@ -1,5 +1,5 @@
 # CollegeCourseSchedule
-This application will use a Windows Presentation Foundation(WPF)
+This application uses a Windows Presentation Foundation(WPF)
 front end to display course and professor data. The main 
 window for the application contains member variables
 for Course Collection and Professor Collection. Those member
