@@ -36,7 +36,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="CollegeCourseLibrary1">
-      <HintPath>..\..\..\..\Documents\Visual Studio 2015\Projects\CollegeCourseLibrary1\CollegeCourseLibrary1\bin\Debug\CollegeCourseLibrary1.dll</HintPath>
+      <HintPath>..\..\..\..\..\Source\Repos\CourseLibaryDLL\CollegeCourseLibrary1\bin\Debug\CollegeCourseLibrary1.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />

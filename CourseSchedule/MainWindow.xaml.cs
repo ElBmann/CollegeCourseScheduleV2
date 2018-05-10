@@ -67,7 +67,7 @@ namespace CourseSchedule
             _NumberDataTextBox.IsReadOnly = true;
             _TitleDataTextBox.IsReadOnly = true;
             OFD.InitialDirectory = path;
-            
+
         }//End Main Window
 
 
@@ -103,10 +103,10 @@ namespace CourseSchedule
             }
             else
             {
-                
+
                 string filename = "courses.json";
 
-                 //Opens the file stream to read the JSON
+                //Opens the file stream to read the JSON
                 FileStream courseReader = new FileStream(filename, FileMode.Open, FileAccess.Read);
 
                 //DataContractJsonSerializer Instance
@@ -125,10 +125,10 @@ namespace CourseSchedule
                     C_Credits = listCourses.Credits.ToString();
                     C_Desc = listCourses.Description.ToString();
                     C_Desi = listCourses.Designator.ToString();
-                  
 
-                  
-                   
+
+
+
                     int credits = Int32.Parse(C_Credits);
                     int course_ID = Int32.Parse(C_ID);
                     c.Id = course_ID;
@@ -161,7 +161,7 @@ namespace CourseSchedule
                     _DescriptionDataTextBox.Text = CC.Find(searchCourseID).Description.ToString();
 
 
-                   
+
                 }
                 else
                 {
@@ -218,15 +218,15 @@ namespace CourseSchedule
                 CC = (CourseCollection)inputCourseSerializer.ReadObject(courseReader);
 
                 //This can be used to populate fields or list views
-               /* foreach (var listCourses in CC.CList)
-                {
-                    _CourseIDDataTextBox.Text = listCourses.Id.ToString();
-                }*/
+                /* foreach (var listCourses in CC.CList)
+                 {
+                     _CourseIDDataTextBox.Text = listCourses.Id.ToString();
+                 }*/
                 courseReader.Close();
 
             }
 
-               
+
 
 
         }//End _OpenCrsCollectionbutton_Click
@@ -246,7 +246,7 @@ namespace CourseSchedule
             string C_Credits = "";
             string C_Desc = "";
             string C_Desi = "";
-          
+
 
             _CourseIDDataTextBox.Clear();
             _NumberDataTextBox.Clear();
@@ -283,7 +283,7 @@ namespace CourseSchedule
                     C_Credits = listCourses.Credits.ToString();
                     C_Desc = listCourses.Description.ToString();
                     C_Desi = listCourses.Designator.ToString();
-                  
+
 
 
                     int credits = Int32.Parse(C_Credits);
@@ -315,7 +315,7 @@ namespace CourseSchedule
                     _DescriptionDataTextBox.Text = CC.Find(_FindDesignatorTextBox.Text, _FindNumberTextBox.Text).Description.ToString();
 
 
-                   
+
                 }
                 else
                 {
@@ -432,3 +432,4 @@ namespace CourseSchedule
     }//End Main Window Class 
     #endregion
 }
+
